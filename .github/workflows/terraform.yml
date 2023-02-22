@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@master
     
     - name: DISPLAY SECRETS
-      run: echo ${{demo.secrets.AWS_ACCESS_KEY_ID}}
+      run: echo ${{secrets.AWS_ACCESS_KEY_ID}}
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
