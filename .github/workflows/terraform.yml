@@ -2,9 +2,9 @@ name: Terraform
 
 on:
   push:
-  pull_request:
-  workflow_dispatch:
-
+    branches:
+      - master
+ 
 jobs:
   terraform-actions:
     name: Workflow
@@ -13,6 +13,7 @@ jobs:
 
     - name: Checkout Repository
       uses: actions/checkout@master
+
     
     - name: DISPLAY SECRETS
       run: echo ${{secrets.AWS_ACCESS_KEY_ID}}
